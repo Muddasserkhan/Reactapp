@@ -1,5 +1,23 @@
 import React from 'react'
+import Menu from './menu'
 
+const menuData = [
+    {
+        menu_item: 'About Us',
+    },
+    {
+        menu_item: 'Find Talent',
+    },
+    {
+        menu_item: 'Find Work',
+    },
+    {
+        menu_item: 'How it Works',
+    },
+    {
+        menu_item: 'Log in',
+    },
+] 
 
 const Header = () => {
   return (
@@ -28,37 +46,8 @@ const Header = () => {
                                     className="collapse navbar-collapse justify-content-sm-end gap-5"
                                     id="navbarText"
                                 >
-                                    <ul className="navbar-nav gap-3">
-                                    <li className="nav-item">
-                                        <a
-                                        className="nav-link text-white active fw-semibold border-bottom"
-                                        aria-current="page"
-                                        href="#"
-                                        >
-                                        About Us
-                                        </a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link text-white" href="#">
-                                        Find Talent
-                                        </a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link text-white" href="#">
-                                        Find Work
-                                        </a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link text-white" href="#">
-                                        How it Works
-                                        </a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link text-white" href="#">
-                                        Log in
-                                        </a>
-                                    </li>
-                                    </ul>
+                                    <Menu menu = {menuData} />
+
                                     <span className="navbar-btn">
                                         <div className="dropdown">
                                             <button
@@ -74,21 +63,21 @@ const Header = () => {
                                             className="dropdown-menu"
                                             aria-labelledby="dropdownMenuButton1"
                                             >
-                                            <li>
-                                                <a className="dropdown-item" href="#">
-                                                Action
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a className="dropdown-item" href="#">
-                                                Another action
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a className="dropdown-item" href="#">
-                                                Something else here
-                                                </a>
-                                            </li>
+                                                <li>
+                                                    <a className="dropdown-item" href="#">
+                                                    Action
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a className="dropdown-item" href="#">
+                                                    Another action
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a className="dropdown-item" href="#">
+                                                    Something else here
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </span>
