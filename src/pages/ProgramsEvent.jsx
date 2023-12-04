@@ -1,5 +1,5 @@
 import React from 'react'
-import Main_lauout from '../layouts/main_lauout'
+import MainLayout from '../layouts/MainLayout'
 import Event from '../components/event'
 import Banner from '../components/banner'
 import Searchfilter from '../components/searchfilter'
@@ -95,13 +95,10 @@ const eventData = [
 
 ]
 
-const Programs_event = ({children}) => {
-    
-    
+const ProgramsEvent = ({children}) => {
     return (
         <div>
-            <Main_lauout>
-                
+            <MainLayout>
                 <Banner />
                 <section className="section2 py-5 px-md-0 px-3">
                     <div className="container">
@@ -115,10 +112,9 @@ const Programs_event = ({children}) => {
                         <Event event = {eventData} />
                     </div>
                 </section>
-
-            </Main_lauout>
+            </MainLayout>
         </div>
     )
 }
 
-export default Programs_event
+export default ProgramsEvent

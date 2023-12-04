@@ -1,14 +1,16 @@
-import React from 'react'
-import Timer from './timer'
-
+import React from 'react';
+import Timer from './timer';
+const targetDate = new Date('12-12-2023');
 const Banner = () => {
+    // const targetData = '12-12-2023';
+    
     return (
         <>
             <section className="section1 px-0">
                 <div className="bg-dark py-5">
                     <div className="container">
                         <div className="row">
-                            <Timer />
+                            <Timer targetDate = {targetDate}/>
                             <div className="col-lg-6">
                                 <div className="d-flex flex-column justify-content-center h-100 text-lg-start text-sm-center text-center">
                                     <div className="right_top mb-md-5 mb-sm-4 mb-4">
@@ -34,7 +36,7 @@ const Banner = () => {
                                     </div>
                                     </div>
                                     <div className="right_bottom">
-                                    <a href="#" classN className="btn btn-outline-light"ame="btn btn-light join_event">
+                                    <a href="#" className="btn btn-outline-light"ame="btn btn-light join_event">
                                         Join This Event
                                     </a>
                                     </div>

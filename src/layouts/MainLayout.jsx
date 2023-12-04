@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../components/header';
 import Footer from '../components/footer';
 
-const Main_lauout = ({children}) => {
+const MainLayout = ({children}) => {
   return (
     <>
         <Header />
@@ -12,4 +12,4 @@ const Main_lauout = ({children}) => {
   )
 }
 
-export default Main_lauout
+export default MainLayout

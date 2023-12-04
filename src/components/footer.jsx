@@ -1,5 +1,17 @@
 import React from 'react'
 
+const main_menu_Data = [
+    {
+        
+    },
+    {
+
+    },
+    {
+
+    },
+]
+
 const Footer = () => {
 
 const imagePath = process.env.PUBLIC_URL + '/images/icon.png';
@@ -18,6 +30,7 @@ return (
             <div className="container">
                 <div className="pt-5">
                     <div className="row justify-content-around gap-lg-0 gap-sm-5 gap-4 text-md-start text-center">
+
                         <div className="col-lg-2 col-sm-5">
                             <h5 className="fw-bold">COMPANY</h5>
                             <ul className="nav flex-column">
