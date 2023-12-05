@@ -1,16 +1,49 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import Timer from './timer';
+import Calander from './calander';
+// import styled, { css } from 'styled-components';
+import {Link} from "react-router-dom";
+
+
 const targetDate = new Date('12-12-2023');
 const Banner = () => {
-    // const targetData = '12-12-2023';
+    const circle = {
+        width:'450px',
+        height:'450px',
+
+        '@media only screen and (max-width: 570px)': {
+            width: '350px !important',
+            height: '350px !important', 
+        }
+    }
+
     
+
+    
+    // const targetData = '12-12-2023';
+    const location = useLocation();
+    const isEvent = location.pathname === '/';
+    const isSingleEvent = location.pathname === '/event-single';
     return (
         <>
             <section className="section1 px-0">
                 <div className="bg-dark py-5">
                     <div className="container">
                         <div className="row">
-                            <Timer targetDate = {targetDate}/>
+                            <div className="col-lg-6 mb-lg-0 mb-sm-5 mb-5">
+                                <div className="circle rounded-circle border border-5 mx-xl-auto d-flex flex-column justify-content-end gap-5 pb-5 mx-lg-0 mx-sm-auto mx-auto" style={circle}>
+                                    {
+                                        isEvent && 
+                                        (
+                                            <>
+                                                <Timer targetDate={targetDate} />
+                                                <Calander />
+                                            </>
+                                        )
+                                    }
+                                </div>
+                            </div>
                             <div className="col-lg-6">
                                 <div className="d-flex flex-column justify-content-center h-100 text-lg-start text-sm-center text-center">
                                     <div className="right_top mb-md-5 mb-sm-4 mb-4">
@@ -36,9 +69,21 @@ const Banner = () => {
                                     </div>
                                     </div>
                                     <div className="right_bottom">
-                                    <a href="#" className="btn btn-outline-light"ame="btn btn-light join_event">
-                                        Join This Event
-                                    </a>
+                                        {
+                                            isEvent && 
+                                            <Link to={"/join"} className="btn btn-outline-light"ame="btn btn-light join_event">
+                                                Join This Event
+                                            </Link>
+                                        }
+                                        
+                                        {
+                                            isSingleEvent && 
+                                            <div className="bg-light text-dark p-4">
+                                                <Timer targetDate={targetDate} />
+                                            </div>
+                                        }
+                                        
+                                        
                                     </div>
                                 </div>
                             </div>

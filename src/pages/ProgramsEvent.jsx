@@ -3,99 +3,9 @@ import MainLayout from '../layouts/MainLayout'
 import Event from '../components/event'
 import Banner from '../components/banner'
 import Searchfilter from '../components/searchfilter'
-const eventData = [
-    {
-        date:'12',
-        month:'April',
-        year:'2019',
-        event_title:'Experts Collaborations',
-        event_description:'With supporting text below as a natural lead-in to additional content. sWith supporting text below as a natural lead-in to additional content.',
-        location:'Gonaomanan Street 229, California',
-        view_map:'',
-        event_btn:'Join This Event',
-    },
+import Newsletter from '../components/newsletter'
 
-    {
-        date:'12',
-        month:'April',
-        year:'2019',
-        event_title:'Experts Collaborations',
-        event_description:'With supporting text below as a natural lead-in to additional content. sWith supporting text below as a natural lead-in to additional content.',
-        location:'Gonaomanan Street 229, California',
-        view_map:'',
-        event_btn:'Join This Event',
-    },
-
-    {
-        date:'12',
-        month:'April',
-        year:'2019',
-        event_title:'Experts Collaborations',
-        event_description:'With supporting text below as a natural lead-in to additional content. sWith supporting text below as a natural lead-in to additional content.',
-        location:'Gonaomanan Street 229, California',
-        view_map:'',
-        event_btn:'Join This Event',
-    },
-
-    {
-        date:'12',
-        month:'April',
-        year:'2019',
-        event_title:'Experts Collaborations',
-        event_description:'With supporting text below as a natural lead-in to additional content. sWith supporting text below as a natural lead-in to additional content.',
-        location:'Gonaomanan Street 229, California',
-        view_map:'',
-        event_btn:'Join This Event',
-    },
-
-    {
-        date:'12',
-        month:'April',
-        year:'2019',
-        event_title:'Experts Collaborations',
-        event_description:'With supporting text below as a natural lead-in to additional content. sWith supporting text below as a natural lead-in to additional content.',
-        location:'Gonaomanan Street 229, California',
-        view_map:'',
-        event_btn:'Join This Event',
-    },
-
-    {
-        date:'12',
-        month:'April',
-        year:'2019',
-        event_title:'Experts Collaborations',
-        event_description:'With supporting text below as a natural lead-in to additional content. sWith supporting text below as a natural lead-in to additional content.',
-        location:'Gonaomanan Street 229, California',
-        view_map:'',
-        event_btn:'Join This Event',
-    },
-
-    {
-        date:'12',
-        month:'April',
-        year:'2019',
-        event_title:'Experts Collaborations',
-        event_description:'With supporting text below as a natural lead-in to additional content. sWith supporting text below as a natural lead-in to additional content.',
-        location:'Gonaomanan Street 229, California',
-        view_map:'',
-        event_btn:'Join This Event',
-    },
-
-    {
-        date:'12',
-        month:'April',
-        year:'2019',
-        event_title:'Experts Collaborations',
-        event_description:'With supporting text below as a natural lead-in to additional content. sWith supporting text below as a natural lead-in to additional content.',
-        location:'Gonaomanan Street 229, California',
-        view_map:'',
-        event_btn:'Join This Event',
-    }
-
-
-]
-
-const ProgramsEvent = ({children}) => {
+const ProgramsEvent = ({eventData}) => {
     return (
         <div>
             <MainLayout>
@@ -110,8 +20,11 @@ const ProgramsEvent = ({children}) => {
                         </div>
 
                         <Event event = {eventData} />
+                        
                     </div>
                 </section>
+
+                <Newsletter />
             </MainLayout>
         </div>
     )

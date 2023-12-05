@@ -1,21 +1,27 @@
 import React from 'react'
 import Menu from './menu'
+import {Link} from "react-router-dom";
 
 const menuData = [
     {
         menu_item: 'About Us',
+        navLink:'/about-us',
     },
     {
         menu_item: 'Find Talent',
+        navLink:'/find-talent',
     },
     {
         menu_item: 'Find Work',
+        navLink:'/find-work',
     },
     {
         menu_item: 'How it Works',
+        navLink:'/how-it-works',
     },
     {
         menu_item: 'Log in',
+        navLink:'/login',
     },
 ] 
 
@@ -28,9 +34,9 @@ const Header = () => {
                     <div className="container">
                         <nav className="navbar navbar-expand-lg">
                             <div className="container-fluid p-0">
-                                <a className="navbar-brand" href="#">
+                                <Link className="navbar-brand" to={'/'}>
                                     <img src={process.env.PUBLIC_URL + '/images/Logo.png'}  alt="Logo" class="logo"/>
-                                </a>
+                                </Link>
                                 <button
                                     className="navbar-toggler bg-light"
                                     type="button"
@@ -64,19 +70,19 @@ const Header = () => {
                                             aria-labelledby="dropdownMenuButton1"
                                             >
                                                 <li>
-                                                    <a className="dropdown-item" href="#">
+                                                    <Link className="dropdown-item" to={'/as'}>
                                                     Action
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a className="dropdown-item" href="#">
+                                                    <Link className="dropdown-item" to={'/as'}>
                                                     Another action
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a className="dropdown-item" href="#">
+                                                    <Link className="dropdown-item" to={'/as'}>
                                                     Something else here
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </div>

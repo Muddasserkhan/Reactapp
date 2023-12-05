@@ -1,10 +1,9 @@
 import React from 'react'
-import location_svg from '../images/location.svg'
-
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {Link} from "react-router-dom";
 function Event({event}) {
     
-
+    
     return (
         <>
            {
@@ -45,14 +44,14 @@ function Event({event}) {
                                 {event.location}
                             </span>
                             <span>
-                                <a href="#" className='btn p-0 text-primary'>View Map</a>
+                                <Link to={'/view-map'} className='btn p-0 text-primary'>View Map</Link>
                             </span>
                             </div>
                         </div>
                         <div className="col-md-3 text-md-end p-0 m-0">
-                            <a href="#" className="btn btn-outline-dark"assName="puple_outline_btn btn">
+                            <Link to={`/event-single/${event.id}`} className="btn btn-outline-dark"assName="puple_outline_btn btn">
                                 Join This Event
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 ))
