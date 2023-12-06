@@ -28,8 +28,8 @@ const Timer = ({targetDate}) => {
     }, []);
     
     const location = useLocation();
-    const isSingleEvent = location.pathname === '/event-single';
-
+    const isSingleEvent = location.pathname.startsWith('/event-single/');
+    const eventId = isSingleEvent ? location.pathname.split('/event-single/')[1] : null;
 
     const textColorStyle = {
         color: isSingleEvent ? 'dark' : 'white', // Change 'red' to your desired color

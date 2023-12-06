@@ -1,8 +1,8 @@
 import React from 'react';
-import MainLayout from '../layouts/MainLayout'
-import Banner from '../components/banner'
-import Newsletter from '../components/newsletter'
-import Eventsinglecontent from '../components/eventsinglecontent'
+import MainLayout from '../layouts/MainLayout';
+import Banner from '../components/Banner';
+import Newsletter from '../components/Newsletter';
+import Eventsinglecontent from '../components/Eventsinglecontent';
 
 
 

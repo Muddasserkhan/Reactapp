@@ -1,9 +1,9 @@
 import React from 'react'
 import MainLayout from '../layouts/MainLayout'
-import Event from '../components/event'
-import Banner from '../components/banner'
-import Searchfilter from '../components/searchfilter'
-import Newsletter from '../components/newsletter'
+import Event from '../components/Event'
+import Banner from '../components/Banner'
+import Searchfilter from '../components/Searchfilter'
+import Newsletter from '../components/Newsletter'
 
 const ProgramsEvent = ({eventData}) => {
     return (

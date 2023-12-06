@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import Timer from './timer';
-import Calander from './calander';
+import Timer from './Timer';
+import Calander from './Calander';
 // import styled, { css } from 'styled-components';
 import {Link} from "react-router-dom";
 
@@ -18,13 +18,12 @@ const Banner = () => {
         }
     }
 
-    
-
-    
     // const targetData = '12-12-2023';
     const location = useLocation();
     const isEvent = location.pathname === '/';
-    const isSingleEvent = location.pathname === '/event-single';
+    // const isSingleEvent = location.pathname === '/event-single/:eventId';
+    const isSingleEvent = location.pathname.startsWith('/event-single/');
+    const eventId = isSingleEvent ? location.pathname.split('/event-single/')[1] : null;
     return (
         <>
             <section className="section1 px-0">
@@ -77,7 +76,8 @@ const Banner = () => {
                                         }
                                         
                                         {
-                                            isSingleEvent && 
+                                            isSingleEvent &&
+                                            
                                             <div className="bg-light text-dark p-4">
                                                 <Timer targetDate={targetDate} />
                                             </div>
