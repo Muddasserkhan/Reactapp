@@ -35,7 +35,7 @@ const Header = () => {
                         <nav className="navbar navbar-expand-lg">
                             <div className="container-fluid p-0">
                                 <Link className="navbar-brand" to={'/'}>
-                                    <img src={process.env.PUBLIC_URL + '/images/Logo.png'}  alt="Logo" class="logo"/>
+                                    <img src={process.env.PUBLIC_URL + '/images/Logo.png'}  alt="Logo" className="logo"/>
                                 </Link>
                                 <button
                                     className="navbar-toggler bg-light"

@@ -60,7 +60,7 @@ const Eventsinglecontent = ({eventData}) => {
                                         
                                         <p className='mb-5'>{event.event_description}</p>
                                         <div>
-                                            <img src={event.image} alt="image" className='w-100'/>
+                                            <img src={event.image} alt="location" className='w-100'/>
                                         </div>
                                         <Link to={event.event_btn[0].link} className='btn btn-dark mt-5'>{event.event_btn[0].text}</Link>
                                     </div>

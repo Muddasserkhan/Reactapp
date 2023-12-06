@@ -153,7 +153,7 @@ return (
 
                         {
                             mainmenudata.map((menu, index) => (
-                                <div className="col-lg-2 col-sm-5">
+                                <div className="col-lg-2 col-sm-5" key={index}>
                                     <h5 className="fw-bold">{menu.mainmenuitem}</h5>
                                     <ul className="nav flex-column">
                                         {

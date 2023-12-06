@@ -5,25 +5,20 @@ import Calander from './Calander';
 // import styled, { css } from 'styled-components';
 import {Link} from "react-router-dom";
 
-
 const targetDate = new Date('12-12-2023');
+
 const Banner = () => {
+    
     const circle = {
         width:'450px',
         height:'450px',
-
-        '@media only screen and (max-width: 570px)': {
-            width: '350px !important',
-            height: '350px !important', 
-        }
-    }
-
+    };
     // const targetData = '12-12-2023';
     const location = useLocation();
     const isEvent = location.pathname === '/';
     // const isSingleEvent = location.pathname === '/event-single/:eventId';
-    const isSingleEvent = location.pathname.startsWith('/event-single/');
-    const eventId = isSingleEvent ? location.pathname.split('/event-single/')[1] : null;
+    const isSingleEvents = location.pathname.startsWith('/event-single/');
+    const isSingleEvent = isSingleEvents ? location.pathname.split('/event-single/')[1] : null;
     return (
         <>
             <section className="section1 px-0">

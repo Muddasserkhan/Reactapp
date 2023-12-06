@@ -1,12 +1,11 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {Link} from "react-router-dom";
 function Event({event}) {
     return (
         <>
            {
                 event.map((event ,index) => (
-                    <div className="row p-4 border border-1 align-items-center mb-4 gap-md-0 gap-sm-4 gap-4">
+                    <div className="row p-4 border border-1 align-items-center mb-4 gap-md-0 gap-sm-4 gap-4" key={index}>
                         <div className="col-md-2 p-0 m-0">
                             <div className="date_cal">
                                 <div className="d-inline-block text-center">
@@ -47,7 +46,7 @@ function Event({event}) {
                             </div>
                         </div>
                         <div className="col-md-3 text-md-end p-0 m-0">
-                            <Link to={`/event-single/${event.id}`} className="btn btn-outline-dark"assName="puple_outline_btn btn">
+                            <Link to={`/event-single/${event.id}`} className="btn btn-outline-dark">
                                 Join This Event
                             </Link>
                         </div>
