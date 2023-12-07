@@ -1,6 +1,8 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react';
+import Event from './Event';
+// import {eventData} from '../EventData';
 
-const Searchfilter = () => {
+const Searchfilter = ({eventData}) => {
     const monthNames = [
         'January', 'February', 'March', 'April',
     'May', 'June', 'July', 'August',
@@ -10,6 +12,32 @@ const Searchfilter = () => {
     const currentYear = new Date().getFullYear();
     const yearsRange = 20;
     const years = Array.from({ length: yearsRange * 2 + 1 }, (_, index) => currentYear - yearsRange + index);
+    
+    const [searchMonth, setMonth] = useState('');
+    const [searchYear, setYear] = useState('');
+
+    const [newList, setNewlist] = useState([]);
+
+    const handleChangeMonth = (month) => {
+        setMonth(month.target.value);
+        console.log(month.target.value);
+    }
+    const handleChangeYear = (year) => {
+        setYear(year.target.value);
+        console.log(year.target.value);
+    }
+
+    const filteredEvents = eventData.filter(event => {
+        return (
+            (searchMonth === '' || event.month === searchMonth) &&
+            (searchYear === '' || event.year === searchYear)
+        );
+    });
+
+    useEffect(()=>{
+        setNewlist(filteredEvents);
+    }, [searchMonth,searchYear])
+
     return (
         <>
             <div className="col-md-6 mx-auto">
@@ -23,11 +51,13 @@ const Searchfilter = () => {
                                 <select
                                 className="form-select form-select-md"
                                 aria-label=".form-select-lg example"
+                                value={searchMonth}
+                                onChange={handleChangeMonth}
                                 >
                                 <option value='Choose the month'>Choose the Month</option>
                                 {
                                     monthNames.map((month, index) => (
-                                        <option key={index} value={index + 1}>
+                                        <option key={index} value={month}>
                                             {month}
                                         </option>
                                     ))
@@ -44,6 +74,7 @@ const Searchfilter = () => {
                                 <select
                                 className="form-select form-select-md"
                                 aria-label=".form-select-lg example"
+                                onChange={handleChangeYear}
                                 >
                                 <option value='Choose the year'>Choose the year</option>
                                 {
@@ -58,6 +89,17 @@ const Searchfilter = () => {
                         </div>
                     </div>
                 </form>
+            </div>
+            <div className="container">
+                <div className="row">
+                    <div className="text-center">
+                        {newList.length === 0 ? (
+                            <p className="text-center">Events Not Found</p>
+                        ) : (
+                            <Event event={newList} />
+                        )}
+                    </div>
+                </div>
             </div>
         </>
     )

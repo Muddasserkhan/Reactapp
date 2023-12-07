@@ -1,11 +1,13 @@
 import React from 'react'
 import MainLayout from '../layouts/MainLayout'
-import Event from '../components/Event'
+// import Event from '../components/Event'
 import Banner from '../components/Banner'
-import Searchfilter from '../components/Searchfilter'
 import Newsletter from '../components/Newsletter'
+// import {eventData} from '../EventData';
+import Searchfilter from '../components/Searchfilter'
 
 const ProgramsEvent = ({eventData}) => {
+
     return (
         <div>
             <MainLayout>
@@ -16,14 +18,15 @@ const ProgramsEvent = ({eventData}) => {
                             <div className="col-12 text-center mb-4">
                                 <h2>Discover All The Evets</h2>
                             </div>
-                            <Searchfilter />
+                            <Searchfilter eventData={eventData}/>
+
                         </div>
 
-                        <Event event = {eventData} />
+                        {/* <Event event = {eventData} /> */}
                         
                     </div>
                 </section>
-
+                
                 <Newsletter />
             </MainLayout>
         </div>
