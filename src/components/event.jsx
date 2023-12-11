@@ -5,7 +5,7 @@ function Event({event}) {
         <>
            {
                 event.map((event ,index) => (
-                    <div className="row p-4 border border-1 align-items-center mb-4 gap-md-0 gap-sm-4 gap-4" key={index}>
+                    <div className="row p-4 border border-1 align-items-md-start align-items-center mb-4 gap-md-0 gap-sm-4 gap-4" key={index}>
                         <div className="col-md-2 p-0 m-0">
                             <div className="date_cal">
                                 <div className="d-inline-block text-center">

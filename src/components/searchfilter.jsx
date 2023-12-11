@@ -20,11 +20,9 @@ const Searchfilter = ({eventData}) => {
 
     const handleChangeMonth = (month) => {
         setMonth(month.target.value);
-        console.log(month.target.value);
     }
     const handleChangeYear = (year) => {
         setYear(year.target.value);
-        console.log(year.target.value);
     }
 
     const filteredEvents = eventData.filter(event => {
@@ -92,9 +90,9 @@ const Searchfilter = ({eventData}) => {
             </div>
             <div className="container">
                 <div className="row">
-                    <div className="text-center">
+                    <div className="text-md-start text-center">
                         {newList.length === 0 ? (
-                            <p className="text-center">Events Not Found</p>
+                            <p className="text-md-start">Events Not Found</p>
                         ) : (
                             <Event event={newList} />
                         )}

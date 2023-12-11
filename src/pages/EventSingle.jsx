@@ -13,10 +13,8 @@ const EventSingle = ({eventData}) => {
         <>
             <MainLayout>
                 <Banner />
-
-                    <Eventsinglecontent eventData = {eventData} />
-
-                    <Newsletter />
+                <Eventsinglecontent eventData = {eventData} />
+                <Newsletter />
             </MainLayout>
         </>
     )

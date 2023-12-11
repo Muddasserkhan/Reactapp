@@ -5,7 +5,7 @@ import Calander from './Calander';
 // import styled, { css } from 'styled-components';
 import {Link} from "react-router-dom";
 
-const targetDate = new Date('12-12-2023');
+const targetDate = new Date('12-15-2023');
 
 const Banner = () => {
     

@@ -12,7 +12,7 @@ const Eventsinglecontent = ({eventData}) => {
     
         // Update the state with the selected event
         setEvent(selectedEvent);
-    }, [eventId, eventData]);
+    }, [eventId, event]);
 
 
     
