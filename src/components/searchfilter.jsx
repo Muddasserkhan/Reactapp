@@ -1,8 +1,9 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect, useRef} from 'react';
 import Event from './Event';
 // import {eventData} from '../EventData';
 
 const Searchfilter = ({eventData}) => {
+    let input = useRef(null);
     const monthNames = [
         'January', 'February', 'March', 'April',
     'May', 'June', 'July', 'August',
@@ -34,7 +35,7 @@ const Searchfilter = ({eventData}) => {
 
     useEffect(()=>{
         setNewlist(filteredEvents);
-    }, [searchMonth,searchYear])
+    }, [searchMonth, searchYear])
 
     return (
         <>
@@ -46,7 +47,7 @@ const Searchfilter = ({eventData}) => {
                                 Select Month
                             </label>
                             <div className="px-0">
-                                <select
+                                <select ref={input}
                                 className="form-select form-select-md"
                                 aria-label=".form-select-lg example"
                                 value={searchMonth}
